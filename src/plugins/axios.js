@@ -3,18 +3,17 @@
 import axios from "axios";
 import { Loading } from 'element-ui'
 
-
 const APIMAP = {
-
+  data: '/data1'
 }
-
 
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  baseURL: process.env.baseURL || process.env.apiUrl || "",
+  // baseURL: process.env.baseURL || process.env.apiUrl || "",
+  baseURL: '/api',
   timeout: 2500, // Timeout
 };
 
@@ -25,6 +24,8 @@ let loadingInstance
 
 _axios.interceptors.request.use(
   (config) =>  {
+    // eslint-disable-next-line no-console
+    console.log(config.baseURL,process.env.BASEURL)
     loadingInstance = Loading.service({
       text: '加载中...',
       background: 'rgba(255, 255, 255, 0.2)'
@@ -67,8 +68,8 @@ let initApiConfig = (key) => {
 ***/
 export default {
   get: (key, params) => {
-    let url = initApiConfig(key, params);
-    return axios.get(url, {params: params});
+    let url = initApiConfig(key);
+    return _axios.get(url, {params: params});
   },
 
   post: (key, data) => {

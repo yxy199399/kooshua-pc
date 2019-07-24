@@ -1,3 +1,4 @@
+// const baseURL = process.env.baseURL;
 module.exports = {
   // 部署应用包时的基本 URL
   publicPath: process.env.NODE_ENV === 'production'
@@ -137,7 +138,15 @@ module.exports = {
     hotOnly: false,
 
     // 将任何未知请求 (没有匹配到静态文件的请求) 代理到该字段指向的地方 
-    proxy: null,
+    proxy: {
+      '/api': {
+        target: process.env.BASEURL || 'http://localhost:8080/api',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/api/'   // 在请求的时候 凡是/api开头的地址都可以跨域
+        }
+      }
+    },
 
     // before: app => {
     // }

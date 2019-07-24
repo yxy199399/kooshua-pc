@@ -7,10 +7,12 @@ import router from './router'
 import Utils from './helper/Utils'
 import Sesstions from './helper/Sesstions'
 import Filters from './helper/Filters'
+import $Axios from './plugins/axios'
 
 Vue.config.productionTip = false
 Vue.prototype.Utils = Utils
 Vue.prototype.Sesstions = Sesstions
+Vue.prototype.$axios = $Axios
 
 //过滤器
 Object.keys(Filters).forEach(key => {
