@@ -25,7 +25,7 @@ let loadingInstance
 _axios.interceptors.request.use(
   (config) =>  {
     // eslint-disable-next-line no-console
-    console.log(config.baseURL,process.env.BASEURL)
+    console.log(process.env.VUE_APP_BASEURL)
     loadingInstance = Loading.service({
       text: '加载中...',
       background: 'rgba(255, 255, 255, 0.2)'

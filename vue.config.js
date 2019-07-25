@@ -7,7 +7,7 @@ module.exports = {
     
   // 运行 vue-cli-service build 时生成的生产环境构建文件的目录
   // 默认构建前清除文件夹(构建时传入 --no-clean 可关闭该行为
-  outputDir: 'dist',
+  outputDir: process.env.VUE_APP_CURRENTMODE,
 
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
   assetsDir: 'static',
@@ -140,7 +140,7 @@ module.exports = {
     // 将任何未知请求 (没有匹配到静态文件的请求) 代理到该字段指向的地方 
     proxy: {
       '/api': {
-        target: process.env.BASEURL || 'http://localhost:8080/api',
+        target: process.env.VUE_APP_BASEURL,
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/api/'   // 在请求的时候 凡是/api开头的地址都可以跨域
