@@ -1,4 +1,11 @@
 // const baseURL = process.env.baseURL;
+
+const path = require('path');
+const merge = require('webpack-merge')
+function resolve (dir) {
+    return path.join(__dirname, dir)
+}
+
 module.exports = {
   // 部署应用包时的基本 URL
   publicPath: process.env.NODE_ENV === 'production'
@@ -87,9 +94,24 @@ module.exports = {
     // 'src/lib' 目录下为外部库文件，不参与 eslint 检测
     config.module
       .rule('eslint')
-      .exclude
-      .add('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
-      .end()
+        .exclude
+        .add('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
+        .rule('images')
+      .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
+        .use('url-loader')
+        .loader('url-loader')
+        .tap(options =>
+          merge(options, {
+            limit: 10000,
+          })
+		)
+        .end();
+      
+
+      //配置别名
+      config.resolve.alias
+      .set('@', resolve('src'))
+      .set('styleUrl', resolve('src/assets/styles'))
   },
 
   // 配置高于chainWebpack中关于 css loader 的配置
@@ -128,15 +150,10 @@ module.exports = {
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
     open: true,
-
     host: '127.0.0.1',
-
     port: 3000,
-
     https: false,
-
-    hotOnly: false,
-
+    hotOnly: true,
     // 将任何未知请求 (没有匹配到静态文件的请求) 代理到该字段指向的地方 
     proxy: {
       '/api': {

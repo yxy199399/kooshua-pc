@@ -8,6 +8,7 @@ import Utils from './helper/Utils'
 import Sesstions from './helper/Sesstions'
 import Filters from './helper/Filters'
 import $Axios from './plugins/axios'
+import 'styleUrl/comment.css'
 
 Vue.config.productionTip = false
 Vue.prototype.Utils = Utils

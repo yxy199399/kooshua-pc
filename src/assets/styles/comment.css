@@ -1,0 +1,132 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   重置样式
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   初始化公共样式
+   License: none (public domain)
+*/
+html {
+	height:100%;
+  box-sizing: border-box;
+}
+body {
+	height: 100%;
+  font: 12px/1.5 'ArialNova','Microsoft YaHei', '微软雅黑';
+  min-width: 960px;
+  margin: 0 auto;
+}
+#app {
+	height: 100%;
+}
+
+input {
+	outline: none;
+}
+
+input::placeholder {
+	color: #969899;
+	font-size: 14px;
+}
+
+/* 登录（login）公共样式 begin */
+.back-icon {
+	width: 20px;
+	height: 20px;
+	float: left;
+	background: url('../images/login/icon_left.png') no-repeat center center;
+	background-size: cover;
+}
+.back-icon:hover {
+	background-image: url('../images/login/icon_left_hover.png')
+}
+.login-back-icon {
+	margin-left: 30px;
+}
+.login {
+	height: 100%;
+	position: relative;
+}
+.login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 520px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 39px 0 40px 0;
+	background:rgba(16,21,26,0.8);
+}
+.login-input-list {
+	margin: 0 60px;
+}
+.login-input-item {
+	margin-bottom: 20px;
+	position: relative;
+}
+.item-input {
+	width: 100%;
+	background: transparent;
+	padding: 10px 0 10px 32px;
+	border: none;
+	border-bottom: solid 1px #646566;
+	box-sizing: border-box;
+	font-size:14px;
+	line-height: 20px;
+	color: #fff;
+}
+.input-modified {
+	position: absolute;
+	left: 0;
+	bottom: 11px;
+	width: 20px;
+	height: 20px;
+}
+
+/* 登录（login）公共样式 end */
