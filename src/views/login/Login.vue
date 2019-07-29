@@ -11,8 +11,15 @@
       </div>
       <div class="login-input-list">
         <div class="login-input-item">
-          <img class="input-modified" src="@/assets/images/login/account_input.png" alt="">
-          <input class="item-input" type="text" placeholder="账号">
+          <icon-svg class="input-modified" icon-class="icon_user_selected" />
+          <el-input
+            class="item-input"
+            placeholder="账号"
+            v-model="item.account"
+            clearable>
+          </el-input>
+          <!-- <img class="input-modified" src="@/assets/images/login/account_input.png" alt="">
+          <input class="item-input" type="text" placeholder="账号"> -->
         </div>
         <div class="login-input-item"></div>
         <div class="login-input-item login-input-item-valid"></div>
@@ -26,7 +33,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      item: {
+        account: ''
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

@@ -106,7 +106,7 @@ input::placeholder {
 	margin-bottom: 20px;
 	position: relative;
 }
-.item-input {
+.item-input .el-input__inner {
 	width: 100%;
 	background: transparent;
 	padding: 10px 0 10px 32px;
@@ -119,8 +119,10 @@ input::placeholder {
 }
 .input-modified {
 	position: absolute;
+	font-size: 20px;
 	left: 0;
 	bottom: 11px;
 	width: 20px;
 	height: 20px;
+	filter: grayscale(100%) brightness(300%) contrast(60%);
 }
