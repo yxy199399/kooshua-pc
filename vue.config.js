@@ -85,6 +85,44 @@ module.exports = {
   // webpack 链接 API，用于生成和修改 webapck 配置
   // https://github.com/mozilla-neutrino/webpack-chain
   chainWebpack: (config) => {
+    //配置别名
+    config.resolve.alias
+      .set('@', resolve('src'))
+      .set('styleUrl', resolve('src/assets/styles'))
+ 
+    const svgRule = config.module.rule('svg')
+    // 清除已有的所有 loader。
+    // 如果你不这样做，接下来的 loader 会附加在该规则现有的 loader 之后。
+    svgRule.uses.clear()
+    svgRule
+      .test(/\.svg$/)
+      .include.add(path.resolve(__dirname, './src/assets/icons/svg'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: '[name]'
+      })
+    const fileRule = config.module.rule('file')
+    fileRule.uses.clear()
+    fileRule
+      .test(/\.svg$/)
+      .exclude.add(path.resolve(__dirname, './src/assets/icons/svg'))
+      .end()
+      .use('file-loader')
+      .loader('file-loader')
+
+      config.module
+      .rule('images')
+        .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
+        .use('url-loader')
+        .loader('url-loader')
+        .tap(options =>
+          merge(options, {
+            limit: 10000,
+          })
+      )
+
     // 因为是多页面，所以取消 chunks，每个页面只对应一个单独的 JS / CSS
     config.optimization
       .splitChunks({
@@ -94,24 +132,9 @@ module.exports = {
     // 'src/lib' 目录下为外部库文件，不参与 eslint 检测
     config.module
       .rule('eslint')
-        .exclude
-        .add('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
-        .rule('images')
-      .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
-        .use('url-loader')
-        .loader('url-loader')
-        .tap(options =>
-          merge(options, {
-            limit: 10000,
-          })
-		)
-        .end();
-      
-
-      //配置别名
-      config.resolve.alias
-      .set('@', resolve('src'))
-      .set('styleUrl', resolve('src/assets/styles'))
+      .exclude
+      .add('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
+      .end();
   },
 
   // 配置高于chainWebpack中关于 css loader 的配置

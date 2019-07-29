@@ -1,5 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    重置样式
+   v2.0 | 20110126
    License: none (public domain)
 */
 
@@ -51,12 +52,7 @@ table {
    初始化公共样式
    License: none (public domain)
 */
-html {
-	height:100%;
-  box-sizing: border-box;
-}
 body {
-	height: 100%;
   font: 12px/1.5 'ArialNova','Microsoft YaHei', '微软雅黑';
   min-width: 960px;
   margin: 0 auto;
@@ -128,5 +124,3 @@ input::placeholder {
 	width: 20px;
 	height: 20px;
 }
-
-/* 登录（login）公共样式 end */

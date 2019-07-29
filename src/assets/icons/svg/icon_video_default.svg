@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_video_default</title>
+    <desc>Created with Sketch.</desc>
+    <g id="酷耍web站2.0视觉规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="酷耍web站2.0_视觉规范" transform="translate(-268.000000, -2588.000000)">
+            <g id="icon_20px" transform="translate(22.000000, 2588.000000)">
+                <g id="icon_video" transform="translate(246.000000, 0.000000)">
+                    <rect id="Rectangle-11" fill="#D8D8D8" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                    <rect id="Rectangle-28" fill="#C8CACC" x="2" y="2" width="16" height="16"></rect>
+                    <rect id="Rectangle-28" stroke="#FFFFFF" x="5" y="5" width="10" height="10"></rect>
+                    <polygon id="Path-2" fill="#FFFFFF" points="8 7 13 9.99083528 8 13"></polygon>
+                </g>
+                <g id="切图框" transform="translate(40.000000, 0.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

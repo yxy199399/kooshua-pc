@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>iocn_search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#00F2FE" offset="0%"></stop>
+            <stop stop-color="#1A94FF" offset="99.6184068%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#01F1FE" offset="0%"></stop>
+            <stop stop-color="#1A96FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="酷耍web站2.0视觉规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="酷耍web站2.0_视觉规范" transform="translate(-463.000000, -3599.000000)">
+            <g id="控件" transform="translate(20.000000, 3115.000000)">
+                <g id="Group-3" transform="translate(0.000000, 65.000000)">
+                    <g id="搜索_2" transform="translate(182.000000, 409.000000)">
+                        <g id="iocn_search" transform="translate(259.000000, 8.000000)">
+                            <g id="iocn_search_2" fill="#FFFFFF" opacity="0">
+                                <rect id="Rectangle-8" x="0" y="0" width="20" height="20"></rect>
+                            </g>
+                            <g id="Group-Copy" transform="translate(2.000000, 2.000000)">
+                                <path d="M10.9168969,10.9168969 C11.2505371,10.5832566 11.7914748,10.5832566 12.1251151,10.9168969 L15.7497698,14.5415516 C16.0834101,14.8751918 16.0834101,15.4161296 15.7497698,15.7497698 C15.4161296,16.0834101 14.8751918,16.0834101 14.5415516,15.7497698 L10.9168969,12.1251151 C10.5832566,11.7914748 10.5832566,11.2505371 10.9168969,10.9168969 Z" id="Rectangle-3" fill="url(#linearGradient-1)"></path>
+                                <path d="M11.4323192,11.4323192 C13.8188566,9.04578188 13.8188566,5.17644034 11.4323192,2.789903 C9.04578188,0.403365665 5.17644034,0.403365665 2.789903,2.789903 C0.403365665,5.17644034 0.403365665,9.04578188 2.789903,11.4323192 C5.17644034,13.8188566 9.04578188,13.8188566 11.4323192,11.4323192 Z" id="Oval" stroke="url(#linearGradient-2)" stroke-width="2"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

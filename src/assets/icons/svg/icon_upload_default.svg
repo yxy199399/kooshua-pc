@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_upload_default</title>
+    <desc>Created with Sketch.</desc>
+    <g id="酷耍web站2.0视觉规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="酷耍web站2.0_视觉规范" transform="translate(-238.000000, -2588.000000)">
+            <g id="icon_20px" transform="translate(22.000000, 2588.000000)">
+                <g id="icon_upload" transform="translate(216.000000, 0.000000)">
+                    <rect id="Rectangle-27" fill="#FFFFFF" opacity="0" x="0" y="0" width="20" height="20"></rect>
+                    <rect id="Rectangle-7" fill="#D4D7D9" x="2" y="13" width="16" height="5"></rect>
+                    <path d="M12,6 L12,11 L8,11 L8,6 L6.00266254,6 L10.0004238,1 L14.0026625,6 L12,6 Z" id="Combined-Shape" fill="#D4D7D9"></path>
+                    <polygon id="Path-8" fill="#BBBDBF" points="2 12.9933196 5 8.9938787 5 12.9933196"></polygon>
+                    <polygon id="Path-8-Copy" fill="#BBBDBF" transform="translate(16.500000, 11.000000) scale(-1, 1) translate(-16.500000, -11.000000) " points="15 13 18 9 18 13"></polygon>
+                    <rect id="Rectangle-4" fill="#D4D7D9" transform="translate(6.500000, 10.500000) rotate(-45.000000) translate(-6.500000, -10.500000) " x="6" y="10" width="1" height="1"></rect>
+                    <rect id="Rectangle-4-Copy-2" fill="#D4D7D9" x="13" y="11" width="1" height="1"></rect>
+                    <rect id="Rectangle-4-Copy-4" fill="#D4D7D9" x="7" y="12" width="1" height="1"></rect>
+                    <rect id="Rectangle-4-Copy-3" fill="#D4D7D9" transform="translate(16.439340, 7.121320) rotate(-315.000000) translate(-16.439340, -7.121320) " x="15.4215729" y="6.10355339" width="2.03553391" height="2.03553391"></rect>
+                    <rect id="Rectangle-4-Copy" fill="#D4D7D9" x="2" y="7" width="2" height="2"></rect>
+                </g>
+                <g id="切图框" transform="translate(40.000000, 0.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

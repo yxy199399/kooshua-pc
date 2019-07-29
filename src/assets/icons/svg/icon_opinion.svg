@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_opinion</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="98.9839234%" y2="98.9839234%" id="linearGradient-1">
+            <stop stop-color="#00F2FE" offset="0%"></stop>
+            <stop stop-color="#1A94FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="酷耍web站2.0视觉规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="酷耍web站2.0_视觉规范" transform="translate(-144.000000, -2532.000000)">
+            <g id="icon_16px" transform="translate(22.000000, 2483.000000)">
+                <g id="icon_opinion" transform="translate(122.000000, 49.000000)">
+                    <rect id="矩形" fill="#FFFFFF" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                    <path d="M1,1 L11.6666667,1 L11.6666667,1.82051598 L1.81632653,1.82051598 L1.81632653,8.11111111 L1,8.11111111 L1,1 Z M4.33333333,11.4444444 L4.33333333,4.33333333 L15,4.33333333 L15,11.4444444 L4.33333333,11.4444444 Z M10.8888889,12.2222222 L13.6666667,12.2222222 L13.6666667,15 L10.8888889,12.2222222 Z M13.3333333,3.48717949 L3.4829932,3.48717949 L3.4829932,9.77777778 L2.66666667,9.77777778 L2.66666667,2.66666667 L13.3333333,2.66666667 L13.3333333,3.48717949 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                </g>
+                <g id="切图框" transform="translate(44.000000, 0.000000)"></g>
+            </g>
+        </g>
+    </g>
+</svg>
