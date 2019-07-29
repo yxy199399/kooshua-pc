@@ -124,5 +124,6 @@ input::placeholder {
 	bottom: 11px;
 	width: 20px;
 	height: 20px;
-	filter: grayscale(100%) brightness(300%) contrast(60%);
+	/* filter: grayscale(100%) brightness(300%) contrast(60%); */
+	/* filter: url('#icon_article_default'); */
 }
