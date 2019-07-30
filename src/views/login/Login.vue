@@ -11,10 +11,6 @@
       </div>
       <div class="login-input-list">
         <div class="login-input-item">
-          <svg>
-            <use :xlink:href="'../../assets/icons/svg/sprite.svg#home'"/>
-          </svg>
-
           <icon-svg class="input-modified" icon-class="icon_user_selected" />
           <el-input
             class="item-input"
