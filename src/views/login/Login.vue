@@ -11,8 +11,10 @@
       </div>
       <div class="login-input-list">
         <div class="login-input-item">
-          <icon-svg class="input-modified" icon-class="icon_user_selected" />
-          <el-input
+          <icon-svg :class="{delFilter: isFocus.accountFocus }" class="input-modified" icon-class="icon_user_selected" />
+          <el-input 
+            @focus="isFocus.accountFocus = true"
+            @blur="isFocus.accountFocus = false"
             class="item-input"
             placeholder="账号"
             v-model="item.account"
@@ -38,10 +40,13 @@ export default {
     return {
       item: {
         account: ''
+      },
+      isFocus: {
+        accountFocus: false
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,17 +1,14 @@
 // const baseURL = process.env.baseURL;
-
-const path = require('path');
-const merge = require('webpack-merge')
+const path = require ('path')
+const merge = require ('webpack-merge')
 function resolve (dir) {
-    return path.join(__dirname, dir)
+  return path.join (__dirname, dir)
 }
 
 module.exports = {
   // 部署应用包时的基本 URL
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/'
-    : '/',
-    
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+
   // 运行 vue-cli-service build 时生成的生产环境构建文件的目录
   // 默认构建前清除文件夹(构建时传入 --no-clean 可关闭该行为
   outputDir: process.env.VUE_APP_CURRENTMODE,
@@ -41,18 +38,18 @@ module.exports = {
       title: '首页',
       // 在这个页面中包含的块，默认情况下会包含
       // 提取出来的通用 chunk 和 vendor chunk。
-      chunks: ['chunk-vendors', 'chunk-common', 'index']
+      chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
     // 当使用只有入口的字符串格式时，
     // 模板会被推导为 `public/subpage.html`
     // 并且如果找不到的话，就回退到 `public/index.html`。
     // 输出文件名会被推导为 `subpage.html`。
-    
+
     // 多入口时，接着写子页面
     //subpage: 'src/subpage/main.js'
   },
-  
-  // eslint-loader 是否在保存的时候检查
+
+  // eslint-loader 是否在保存的时候检查eslintConfig
   // lintOnSave: true,
   lintOnSave: process.env.NODE_ENV !== 'production',
 
@@ -65,76 +62,74 @@ module.exports = {
 
   // 生产环境 sourceMap
   productionSourceMap: false,
-  
-  // 跨域设置 
+
+  // 跨域设置
   // 可取值参考： https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes
   crossorigin: undefined,
-  
+
   // 构建后的文件是部署在 CDN 上的，启用该选项可以提供额外的安全性, 默认false
   integrity: false,
-  
+
   // webpack 配置，键值对象时会合并配置，为方法时会改写配置
   // https://cli.vuejs.org/guide/webpack.html#simple-configuration
   configureWebpack: {
-      plugins: [
+    plugins: [
       // new MyAwesomeWebpackPlugin()
-    ]
+    ],
   },
   //configureWebpack: (config) => {},
 
   // webpack 链接 API，用于生成和修改 webapck 配置
   // https://github.com/mozilla-neutrino/webpack-chain
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     //配置别名
     config.resolve.alias
-      .set('@', resolve('src'))
-      .set('styleUrl', resolve('src/assets/styles'))
- 
-    const svgRule = config.module.rule('svg')
+      .set ('@', resolve ('src'))
+      .set ('styleUrl', resolve ('src/assets/styles'))
+
+    const svgRule = config.module.rule ('svg')
     // 清除已有的所有 loader。
     // 如果你不这样做，接下来的 loader 会附加在该规则现有的 loader 之后。
-    svgRule.uses.clear()
+    svgRule.uses.clear ()
     svgRule
-      .test(/\.svg$/)
-      .include.add(path.resolve(__dirname, './src/assets/icons/svg'))
-      .end()
-      .use('svg-sprite-loader')
-      .loader('svg-sprite-loader')
-      .options({
-        symbolId: '[name]'
+      .test (/\.svg$/)
+      .include.add (path.resolve (__dirname, './src/assets/icons/svg'))
+      .end ()
+      .use ('svg-sprite-loader')
+      .loader ('svg-sprite-loader')
+      .options ({
+        symbolId: '[name]',
       })
-    const fileRule = config.module.rule('file')
-    fileRule.uses.clear()
+    const fileRule = config.module.rule ('file')
+    fileRule.uses.clear ()
     fileRule
-      .test(/\.svg$/)
-      .exclude.add(path.resolve(__dirname, './src/assets/icons/svg'))
-      .end()
-      .use('file-loader')
-      .loader('file-loader')
+      .test (/\.svg$/)
+      .exclude.add (path.resolve (__dirname, './src/assets/icons/svg'))
+      .end ()
+      .use ('file-loader')
+      .loader ('file-loader')
 
-      config.module
-      .rule('images')
-        .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
-        .use('url-loader')
-        .loader('url-loader')
-        .tap(options =>
-          merge(options, {
-            limit: 10000,
-          })
+    config.module
+      .rule ('images')
+      .test (/\.(png|jpe?g|gif|webp)(\?.*)?$/)
+      .use ('url-loader')
+      .loader ('url-loader')
+      .tap (options =>
+        merge (options, {
+          limit: 10000,
+        })
       )
 
     // 因为是多页面，所以取消 chunks，每个页面只对应一个单独的 JS / CSS
-    config.optimization
-      .splitChunks({
-        cacheGroups: {}
-      });
+    config.optimization.splitChunks ({
+      cacheGroups: {},
+    })
 
     // 'src/lib' 目录下为外部库文件，不参与 eslint 检测
     config.module
-      .rule('eslint')
-      .exclude
-      .add('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
-      .end();
+      .rule ('eslint')
+      .exclude.add ('/Users/maybexia/Downloads/FE/community_built-in/src/lib')
+      .end ()
   },
 
   // 配置高于chainWebpack中关于 css loader 的配置
@@ -142,9 +137,9 @@ module.exports = {
     // false 时只有 *.module.[ext] 结尾的文件才会被视作 CSS Modules 模块
     // true 时可以去掉文件名中的 .module， 并将所有的 *.(css|scss|sass|less|styl(us)?) 文件视为 CSS Modules 模块
     modules: false,
-    
-     // 是否使用 css 分离插件 ExtractTextPlugin，采用独立样式文件载入，不采用 <style> 方式内联至 html 文件中
-    // 生产环境下是 true，开发环境下是 false  
+
+    // 是否使用 css 分离插件 ExtractTextPlugin，采用独立样式文件载入，不采用 <style> 方式内联至 html 文件中
+    // 生产环境下是 true，开发环境下是 false
     extract: true,
 
     // 是否构建样式地图，设置为 true 之后可能会影响构建的性能
@@ -159,14 +154,12 @@ module.exports = {
       sass: {
         data: `
           @import "@/element-variables.scss";
-        `
+        `,
         // 这里的选项会传递给 css-loader
       },
-      
-      postcss:{
-        
-      }
-    }
+
+      postcss: {},
+    },
   },
 
   // 所有 webpack-dev-server 的选项都支持
@@ -177,15 +170,15 @@ module.exports = {
     port: 3000,
     https: false,
     hotOnly: true,
-    // 将任何未知请求 (没有匹配到静态文件的请求) 代理到该字段指向的地方 
+    // 将任何未知请求 (没有匹配到静态文件的请求) 代理到该字段指向的地方
     proxy: {
       '/api': {
         target: process.env.VUE_APP_BASEURL,
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/api/'   // 在请求的时候 凡是/api开头的地址都可以跨域
-        }
-      }
+          '^/api': '/api/', // 在请求的时候 凡是/api开头的地址都可以跨域
+        },
+      },
     },
 
     // before: app => {
@@ -193,11 +186,11 @@ module.exports = {
   },
   // 构建时开启多进程处理 babel 编译
   // 是否为 Babel 或 TypeScript 使用 thread-loader
-  parallel: require('os').cpus().length > 1,
+  parallel: require ('os').cpus ().length > 1,
 
   // https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   pwa: {},
 
   // 第三方插件配置
-  pluginOptions: {}
+  pluginOptions: {},
 }

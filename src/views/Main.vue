@@ -138,12 +138,12 @@ export default {
   data() {
     return {
       height: 0,
-      uploadSwitch: "icon_upload_default"
-    };
+      uploadSwitch: 'icon_upload_default'
+    }
   },
   mounted() {},
   methods: {}
-};
+}
 </script>
 
 <style lang="scss" scoped>
