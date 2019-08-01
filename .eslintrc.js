@@ -11,13 +11,10 @@ module.exports = {
     quotes: ['error', 'single'],
     //强制不使用分号结尾
     semi: ['error', 'never'],
+    indent: ['error', 2],
   },
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 6,
-    ecmaFeatures: {
-      // 添加ES特性支持，使之能够识别ES6语法
-      jsx: true,
-    },
   },
 };

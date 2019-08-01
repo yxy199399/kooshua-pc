@@ -15,10 +15,9 @@ export default {
   methods: {
     fetchData() {
       this.$axios.get('data')
-      .then(res => {
-        //eslint-disable-next-line
-        console.log(res.data)
-      })
+        .then(res => {
+          console.log(res.data)
+        })
     }
   },
 }
