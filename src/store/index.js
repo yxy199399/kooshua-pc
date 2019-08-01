@@ -5,17 +5,17 @@ import mutations from './mutations'
 import actions from './actions'
 import getters from './getters'
 
-Vue.use(Vuex)
+Vue.use (Vuex)
 
 const state = {
-	userInfo: {
-    name: '姓名'
-  }
+  userInfo: {
+    name: '姓名',
+  },
 }
 
-export default new Vuex.Store({
-	state,
-	getters,
-	actions,
-	mutations
+export default new Vuex.Store ({
+  state,
+  getters,
+  actions,
+  mutations,
 })

@@ -166,7 +166,7 @@ const router = new Router ({
         },
         {
           path: '/store/detail',
-          name: 'storeIndex',
+          name: 'storeDetail',
           component: () => import ('./views/store/StoreDetail.vue'),
         },
         {

@@ -4,48 +4,129 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -53,79 +134,134 @@ table {
    License: none (public domain)
 */
 body {
-  font: 12px/1.5 'ArialNova','Microsoft YaHei', '微软雅黑';
+  font: 12px/1.5 'ArialNova', 'Microsoft YaHei', '微软雅黑';
   min-width: 960px;
   margin: 0 auto;
 }
 #app {
-	height: 100%;
+  height: 100%;
 }
 
 input {
-	outline: none;
+  outline: none;
 }
 
 input::placeholder {
-	color: #969899;
-	font-size: 14px;
+  color: #969899;
+  font-size: 14px;
 }
+
+/* 复写 begin */
+.el-checkbox__inner {
+  background-color: transparent;
+  border-radius: 0;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background: linear-gradient(135deg, #00f2fe 0%, #1a94ff 100%);
+  border-color: #fff;
+}
+.el-checkbox__inner:hover {
+  border-color: #dcdfe6;
+}
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #fff;
+}
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: #dcdfe6;
+}
+
+/* 复写 end */
 
 /* 登录（login）公共样式 begin */
 .back-icon {
-	width: 20px;
-	height: 20px;
-	float: left;
-	background: url('../images/login/icon_left.png') no-repeat center center;
-	background-size: cover;
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url('../images/login/icon_left.png') no-repeat center center;
+  background-size: cover;
 }
 .back-icon:hover {
-	background-image: url('../images/login/icon_left_hover.png')
+  background-image: url('../images/login/icon_left_hover.png');
 }
 .login-back-icon {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 .login {
-	height: 100%;
-	position: relative;
+  height: 100%;
+  position: relative;
 }
 .login-box {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 520px;
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 39px 0 40px 0;
-	background:rgba(16,21,26,0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 39px 0 40px 0;
+  background: rgba(16, 21, 26, 0.8);
 }
 .login-input-list {
-	margin: 0 60px;
+  margin: 0 60px;
 }
 .login-input-item {
-	margin-bottom: 20px;
-	position: relative;
+  margin-bottom: 20px;
+  position: relative;
 }
 .item-input .el-input__inner {
-	width: 100%;
-	background: transparent;
-	padding: 10px 0 10px 32px;
-	border: none;
-	border-bottom: solid 1px #646566;
-	box-sizing: border-box;
-	font-size:14px;
-	line-height: 20px;
-	color: #fff;
+  width: 100%;
+  background: transparent;
+  padding: 10px 0 10px 32px;
+  border: none;
+  border-bottom: solid 1px #646566;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 0;
 }
 .input-modified {
-	position: absolute;
-	font-size: 20px;
-	left: 0;
-	bottom: 11px;
-	width: 20px;
-	height: 20px;
-	filter: grayscale(100%) brightness(300%) contrast(60%);
+  position: absolute;
+  font-size: 20px;
+  left: 0;
+  bottom: 11px;
+  width: 20px;
+  height: 20px;
+  /* filter: grayscale(100%) brightness(300%) contrast(60%); */
+  filter: grayscale(100%);
 }
 .delFilter {
-	filter: none;
+  filter: none;
+}
+.inputFocus .el-input__inner {
+  border-color: #e1e3e6;
+}
+.input-valid input.el-input__inner {
+  width: calc(100% - 160px);
+}
+.valid-pic {
+  width: 140px;
+  height: 33px;
+  margin-left: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: solid 1px;
+  border-image: linear-gradient(135deg, #00f0fe, #1a97ff) 1 1;
+}
+.valid-pic img {
+  width: 100px;
+  height: 33px;
+  display: block;
+  float: left;
+}
+.valid-refresh {
+  font-size: 20px;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+  filter: grayscale(1);
+}
+.valid-refresh:hover {
+  filter: none;
 }

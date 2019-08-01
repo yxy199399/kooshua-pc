@@ -15,27 +15,73 @@
       </div>
       <div class="login-input-list">
         <div class="login-input-item">
-          <icon-svg :class="{delFilter: isFocus.accountFocus }"
+          <icon-svg :class="{delFilter: isFocus.usernameFocus }"
                     class="input-modified"
                     icon-class="icon_user_selected" />
-          <el-input @focus="isFocus.accountFocus = true"
-                    @blur="isFocus.accountFocus = false"
+          <el-input @focus="isFocus.usernameFocus = true"
+                    @blur="isFocus.usernameFocus = false"
                     class="item-input"
+                    :class="{inputFocus:isFocus.usernameFocus}"
                     placeholder="账号"
-                    v-model="item.account"
+                    v-model="item.username"
                     clearable>
           </el-input>
-          <!-- <img class="input-modified" src="@/assets/images/login/account_input.png" alt="">
-          <input class="item-input" type="text" placeholder="账号"> -->
         </div>
-        <div class="login-input-item"></div>
-        <div class="login-input-item login-input-item-valid"></div>
-        <div class="login-submit"></div>
+        <div class="login-input-item">
+          <icon-svg :class="{delFilter: isFocus.passwordFocus }"
+                    class="input-modified"
+                    icon-class="icon_user_selected" />
+          <el-input @focus="isFocus.passwordFocus = true"
+                    @blur="isFocus.passwordFocus = false"
+                    class="item-input"
+                    :class="{inputFocus:isFocus.passwordFocus}"
+                    placeholder="密码"
+                    type="password"
+                    v-model="item.password"
+                    clearable>
+          </el-input>
+        </div>
+        <div class="login-input-item ">
+          <icon-svg :class="{delFilter: isFocus.captchaFocus }"
+                    class="input-modified"
+                    icon-class="icon_user_selected" />
+          <el-input @focus="isFocus.captchaFocus = true"
+                    @blur="isFocus.captchaFocus = false"
+                    class="item-input input-valid"
+                    :class="{inputFocus:isFocus.captchaFocus}"
+                    placeholder="账号"
+                    v-model="item.captcha"
+                    clearable>
+          </el-input>
+          <div class="valid-pic">
+            <img src="../../assets/images/login/valid.png"
+                 alt="">
+            <div class="valid-refresh">
+              <icon-svg icon-class="icon_refresh" />
+            </div>
+          </div>
+        </div>
+        <div class="login-submit">
+          <button type="button">登录</button>
+        </div>
+        <div>
+          <div class="link-other">
+            <span>注册</span>
+            <span>忘记密码</span>
+          </div>
+          <div>
+            <el-checkbox v-model="item.platform_type">5天内自动登录</el-checkbox>
+          </div>
+        </div>
+        <div class="other-login-way">—第三方账号登录—</div>
+        <div class="other-login-link">
+          <icon-svg icon-class="icon_user_selected" />
+          <icon-svg icon-class="icon_user_selected" />
+          <icon-svg icon-class="icon_user_selected" />
+        </div>
       </div>
-      <div class></div>
-      <div></div>
-      <div></div>
     </div>
+
   </div>
 </template>
 
@@ -44,10 +90,15 @@ export default {
   data() {
     return {
       item: {
-        account: ''
+        username: '',
+        password: '',
+        captcha: '',
+        platform_type: ''
       },
       isFocus: {
-        accountFocus: false
+        usernameFocus: false,
+        passwordFocus: false,
+        captchaFocus: false
       }
     }
   }
@@ -92,6 +143,59 @@ export default {
       float: right;
       margin: -6px 30px 0 0;
     }
+  }
+  .login-submit {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    button {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px 0;
+      text-align: center;
+      border: none;
+      outline: none;
+      font-family:MicrosoftYaHei-Bold;
+      font-weight:bold;
+      letter-spacing: 10px;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(135deg,rgba(0,240,254,1) 0%,rgba(26,151,255,1) 100%);
+      &:hover {
+        background: linear-gradient(90deg, #009198 0%, #0f5899 100%);
+      }
+    }
+  }
+  .link-other {
+    float: right;
+    color: #C8CACC;
+    span {
+      margin-left: 6px;
+      &:hover {
+        color: #fff;
+      }
+      &:last-of-type::before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 8px;
+        background: #E1E3E6;
+        margin-right: 6px;
+      }
+    }
+  }
+  .other-login-way {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size:14px;
+    color:rgba(200,202,204,1);
+    line-height:19px;
+    letter-spacing:1px;
+    position: relative;
+  }
+  .other-login-link {
+    text-align: center;
   }
 }
 </style>
