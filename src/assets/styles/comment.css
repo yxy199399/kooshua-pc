@@ -121,7 +121,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -134,7 +134,7 @@ table {
    License: none (public domain)
 */
 body {
-  font: 12px/1.5 'ArialNova', 'Microsoft YaHei', '微软雅黑';
+  font: 12px/1.5 "ArialNova", "Microsoft YaHei", "微软雅黑";
   min-width: 960px;
   margin: 0 auto;
 }
@@ -177,11 +177,11 @@ input::placeholder {
   width: 20px;
   height: 20px;
   float: left;
-  background: url('../images/login/icon_left.png') no-repeat center center;
+  background: url("../images/login/icon_left.png") no-repeat center center;
   background-size: cover;
 }
 .back-icon:hover {
-  background-image: url('../images/login/icon_left_hover.png');
+  background-image: url("../images/login/icon_left_hover.png");
 }
 .login-back-icon {
   margin-left: 30px;
@@ -248,6 +248,10 @@ input::placeholder {
   bottom: 0;
   border: solid 1px;
   border-image: linear-gradient(135deg, #00f0fe, #1a97ff) 1 1;
+  text-align: center;
+  color: #c8cacc;
+  letter-spacing: 1px;
+  line-height: 33px;
 }
 .valid-pic img {
   width: 100px;
@@ -264,4 +268,30 @@ input::placeholder {
 }
 .valid-refresh:hover {
   filter: none;
+}
+.login-input-item .el-input-group__append,
+.login-input-item .el-input-group__prepend {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px #dcdfe6;
+  border-radius: 0;
+}
+.login-input-item .el-input-group--prepend .el-input__inner {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #dcdfe6;
+  border-radius: 0;
+  color: #fff;
+}
+.login-input-item .el-input-group__prepend::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -13px;
+  bottom: 13px;
+  width: 1px;
+  height: 12px;
+  background: #dcdfe6;
+  margin: 0 10px;
+  z-index: 9;
 }
