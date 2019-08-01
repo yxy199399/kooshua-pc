@@ -2,23 +2,28 @@
   <div class="login">
     <div class="login-box">
       <div class="login-header">
-        <a class="back-icon login-back-icon" href="#"></a>
-        <img class="login-type-switch" src="@/assets/images/login/login_phone.png" />>
+        <a class="back-icon login-back-icon"
+           href="#"></a>
+        <img class="login-type-switch"
+             src="@/assets/images/login/login_phone.png" />>
         <div class="login-title">
-          <img class="login-title-logo" src="@/assets/images/login/logo.png" alt />
+          <img class="login-title-logo"
+               src="@/assets/images/login/logo.png"
+               alt />
           <span class="login-title-text">登录</span>
         </div>
       </div>
       <div class="login-input-list">
         <div class="login-input-item">
-          <icon-svg :class="{delFilter: isFocus.accountFocus }" class="input-modified" icon-class="icon_user_selected" />
-          <el-input 
-            @focus="isFocus.accountFocus = true"
-            @blur="isFocus.accountFocus = false"
-            class="item-input"
-            placeholder="账号"
-            v-model="item.account"
-            clearable>
+          <icon-svg :class="{delFilter: isFocus.accountFocus }"
+                    class="input-modified"
+                    icon-class="icon_user_selected" />
+          <el-input @focus="isFocus.accountFocus = true"
+                    @blur="isFocus.accountFocus = false"
+                    class="item-input"
+                    placeholder="账号"
+                    v-model="item.account"
+                    clearable>
           </el-input>
           <!-- <img class="input-modified" src="@/assets/images/login/account_input.png" alt="">
           <input class="item-input" type="text" placeholder="账号"> -->

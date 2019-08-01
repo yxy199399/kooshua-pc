@@ -72,12 +72,19 @@ module.exports = {
 
   // webpack 配置，键值对象时会合并配置，为方法时会改写配置
   // https://cli.vuejs.org/guide/webpack.html#simple-configuration
-  configureWebpack: {
-    plugins: [
-      // new MyAwesomeWebpackPlugin()
-    ],
+  // configureWebpack: {
+  //   plugins: [
+  //     // new MyAwesomeWebpackPlugin()
+  //   ],
+
+  // },
+
+  configureWebpack: config => {
+    //当是生产环境时，去掉console.log
+    if (process.env.NODE_ENV === 'production') {
+      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+    }
   },
-  //configureWebpack: (config) => {},
 
   // webpack 链接 API，用于生成和修改 webapck 配置
   // https://github.com/mozilla-neutrino/webpack-chain
