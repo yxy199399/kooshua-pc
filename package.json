@@ -8,10 +8,6 @@
     "build:prod": "vue-cli-service build --mode prod",
     "lint": "eslint --ext .js,.vue src"
   },
-  "pre-commit": [
-    "precommit-msg",
-    "lint"
-  ],
   "husky": {
     "hooks": {
       "pre-commit": "cross-env NODE_ENV=prod lint-staged"
