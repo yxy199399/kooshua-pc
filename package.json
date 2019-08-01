@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve --mode dev",
     "build:test": "vue-cli-service build --mode test",
     "build:prod": "vue-cli-service build --mode prod",
-    "lint": "eslint --ext .js,.vue src",
-    "precommit": "lint-staged"
+    "lint": "eslint --ext .js,.vue src"
   },
   "pre-commit": [
     "precommit-msg",
@@ -15,7 +14,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "cross-env NODE_ENV=production lint-staged"
+      "pre-commit": "cross-env NODE_ENV=NODE_ENV lint-staged"
     }
   },
   "lint-staged": {
@@ -37,6 +36,7 @@
     "autoprefixer": "^9.6.1",
     "axios": "^0.18.0",
     "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "husky": "^3.0.2",
