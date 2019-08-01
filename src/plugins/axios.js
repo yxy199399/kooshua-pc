@@ -25,7 +25,6 @@ let loadingInstance
 
 _axios.interceptors.request.use(
   config => {
-    console.log(process.env.VUE_APP_BASEURL, 111)
     loadingInstance = Loading.service({
       text: '加载中...',
       background: 'rgba(255, 255, 255, 0.2)',
