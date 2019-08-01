@@ -6,7 +6,13 @@
     "serve": "vue-cli-service serve --mode dev",
     "build:test": "vue-cli-service build --mode test",
     "build:prod": "vue-cli-service build --mode prod",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint --ext .js,.vue src",
+    "precommit": "lint-staged"
+  },
+  "pre-commit": ["precommit-msg", "lint"],
+  "lint-staged": {
+    "**/*.js": "eslint --ext .js",
+    "**/*.vue": "eslint --ext .vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -25,7 +31,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
     "node-sass": "^4.12.0",
+    "pre-commit": "^1.2.2",
     "sass-loader": "^7.0.3",
     "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-element": "^1.0.1",
