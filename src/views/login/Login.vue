@@ -203,28 +203,6 @@ export default {
       margin: -6px 30px 0 0;
     }
   }
-  .login-submit {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    button {
-      width: 100%;
-      font-size: 16px;
-      padding: 10px 0;
-      text-align: center;
-      border: none;
-      outline: none;
-      font-family:MicrosoftYaHei-Bold;
-      font-weight:bold;
-      letter-spacing: 10px;
-      color: #fff;
-      cursor: pointer;
-      background: linear-gradient(135deg,rgba(0,240,254,1) 0%,rgba(26,151,255,1) 100%);
-      &:hover {
-        background: linear-gradient(90deg, #009198 0%, #0f5899 100%);
-      }
-    }
-  }
   .link-other {
     float: right;
     color: #C8CACC;

@@ -13,7 +13,7 @@ const router = new Router ({
     {
       // login
       path: '/login',
-      name: 'Login',
+      name: 'login',
       component: () => import ('./views/login/Index.vue'),
       redirect: '/login/index',
       children: [

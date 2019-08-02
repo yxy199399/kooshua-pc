@@ -121,7 +121,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -134,7 +134,7 @@ table {
    License: none (public domain)
 */
 body {
-  font: 12px/1.5 "ArialNova", "Microsoft YaHei", "微软雅黑";
+  font: 12px/1.5 'ArialNova', 'Microsoft YaHei', '微软雅黑';
   min-width: 960px;
   margin: 0 auto;
 }
@@ -177,11 +177,11 @@ input::placeholder {
   width: 20px;
   height: 20px;
   float: left;
-  background: url("../images/login/icon_left.png") no-repeat center center;
+  background: url('../images/login/icon_left.png') no-repeat center center;
   background-size: cover;
 }
 .back-icon:hover {
-  background-image: url("../images/login/icon_left_hover.png");
+  background-image: url('../images/login/icon_left_hover.png');
 }
 .login-back-icon {
   margin-left: 30px;
@@ -284,7 +284,7 @@ input::placeholder {
   color: #fff;
 }
 .login-input-item .el-input-group__prepend::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   right: -13px;
@@ -294,4 +294,55 @@ input::placeholder {
   background: #dcdfe6;
   margin: 0 10px;
   z-index: 9;
+}
+.header-title {
+  margin: 35px 60px 66px 60px;
+}
+.header-title .header-title-text {
+  font-size: 18px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #fff;
+  line-height: 24px;
+  letter-spacing: 3px;
+}
+.header-title .header-title-text::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 18px;
+  position: relative;
+  top: 4px;
+  margin-right: 12px;
+  background: linear-gradient(
+    139deg,
+    rgba(0, 240, 254, 1) 0%,
+    rgba(26, 151, 255, 1) 100%
+  );
+}
+.login-submit {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.login-submit button {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 240, 254, 1) 0%,
+    rgba(26, 151, 255, 1) 100%
+  );
+}
+.login-submit button:hover {
+  background: linear-gradient(90deg, #009198 0%, #0f5899 100%);
 }
