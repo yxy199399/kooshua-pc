@@ -102,7 +102,7 @@ export default {
     .corp-list {
       float: left;
       width: 640px;
-      height: 100%;
+      height: 680px;
       padding: 60px 100px 0;
       box-sizing: border-box;
       background:rgba(16,21,26,0.8);
